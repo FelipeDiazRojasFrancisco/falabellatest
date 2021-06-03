@@ -6,7 +6,12 @@ const app = require('../app');
 //Results
 sayHelloResult = app.sayHello();
 addNumbersResult = app.addNumbers(5,5);
+contentArrobaResult = app.contentArroba();
 
+/** 
+ * This is the test for string Hello
+ * @type {string}
+ * */
 describe('App', function(){
 
     describe('sayHello()',function(){
@@ -40,5 +45,22 @@ describe('App', function(){
     });
    
     
+    //Evalua la precencia de Arroba
+    describe('contentArroba()',function(){
+
+        
+    it ('contentArroba should return @', function(){
+       
+        assert.equal(contentArrobaResult,'@');
+   });
+  
+   it ('contentArroba should return type string', function(){
+      
+      assert.typeOf(contentArrobaResult, 'string');
+  });
+
+   });
+
+
 
 });
